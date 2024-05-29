@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+#define TAMANHO 10
+
+int main() {
+    int vetor[TAMANHO];
+    int contadorPares = 0;
+
+    // Leitura do vetor
+    printf("Digite 10 números inteiros:\n");
+    for(int i = 0; i < TAMANHO; i++) {
+        printf("Elemento %d: ", i + 1);
+        scanf("%d", &vetor[i]);
+    }
+
+    // Contagem de valores pares
+    for(int i = 0; i < TAMANHO; i++) {
+        if(vetor[i] % 2 == 0) {
+            contadorPares++;
+        }
+    }
+
+    // Impressão do resultado
+    printf("O vetor possui %d valores pares.\n", contadorPares);
+
+    return 0;
+}
