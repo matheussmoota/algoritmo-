@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+#define LINHAS 4
+#define COLUNAS 4
+
+int main() {
+    int matriz[LINHAS][COLUNAS];
+    int maiorValor = matriz[0][0]; // inicializa com o primeiro elemento
+    int linhaMaiorValor = 0;
+    int colunaMaiorValor = 0;
+
+    // Leitura da matriz
+    printf("Digite os elementos da matriz 4x4:\n");
+    for(int i = 0; i < LINHAS; i++) {
+        for(int j = 0; j < COLUNAS; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+            if(matriz[i][j] > maiorValor) {
+                maiorValor = matriz[i][j];
+                linhaMaiorValor = i;
+                colunaMaiorValor = j;
+            }
+        }
+    }
+
+    // Impressão da matriz
+    printf("Matriz:\n");
+    for(int i = 0; i < LINHAS; i++) {
+        for(int j = 0; j < COLUNAS; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    // Impressão da localização do maior valor
+    printf("O maior valor é %d e está na linha %d e coluna %d.\n", maiorValor, linhaMaiorValor, colunaMaiorValor);
+
+    return 0;
+}
