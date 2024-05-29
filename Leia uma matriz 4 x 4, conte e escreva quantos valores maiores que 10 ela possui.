@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+#define LINHAS 4
+#define COLUNAS 4
+
+int main() {
+    int matriz[LINHAS][COLUNAS];
+    int contador = 0;
+
+    // Leitura da matriz
+    printf("Digite os elementos da matriz 4x4:\n");
+    for(int i = 0; i < LINHAS; i++) {
+        for(int j = 0; j < COLUNAS; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+            if(matriz[i][j] > 10) {
+                contador++;
+            }
+        }
+    }
+
+    // Impressão do número de valores maiores que 10
+    printf("A matriz possui %d valores maiores que 10.\n", contador);
+
+    return 0;
+}
