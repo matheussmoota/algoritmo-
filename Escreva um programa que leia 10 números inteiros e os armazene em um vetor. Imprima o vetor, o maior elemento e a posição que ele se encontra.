@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+#define TAMANHO 10
+
+int main() {
+    int vetor[TAMANHO];
+    int maior, posicaoMaior;
+
+    // Leitura do vetor
+    printf("Digite 10 números inteiros:\n");
+    for(int i = 0; i < TAMANHO; i++) {
+        printf("Elemento %d: ", i + 1);
+        scanf("%d", &vetor[i]);
+    }
+
+    // Inicialização do maior elemento e sua posição
+    maior = vetor[0];
+    posicaoMaior = 0;
+
+    // Encontra o maior elemento e sua posição
+    for(int i = 1; i < TAMANHO; i++) {
+        if(vetor[i] > maior) {
+            maior = vetor[i];
+            posicaoMaior = i;
+        }
+    }
+
+    // Impressão do vetor
+    printf("Vetor: ");
+    for(int i = 0; i < TAMANHO; i++) {
+        printf("%d ", vetor[i]);
+    }
+    printf("\n");
+
+    // Impressão do maior elemento e sua posição
+    printf("O maior elemento é %d e se encontra na posição %d.\n", maior, posicaoMaior);
+
+    return 0;
+}
