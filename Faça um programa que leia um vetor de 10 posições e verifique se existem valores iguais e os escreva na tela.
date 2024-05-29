@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+#define TAMANHO 10
+
+int main() {
+    int vetor[TAMANHO];
+    int i, j;
+    int encontrouIguais = 0;
+
+    // Leitura do vetor
+    printf("Digite 10 números inteiros:\n");
+    for(i = 0; i < TAMANHO; i++) {
+        printf("Elemento %d: ", i + 1);
+        scanf("%d", &vetor[i]);
+    }
+
+    // Verificação de valores iguais
+    printf("Valores iguais encontrados:\n");
+    for(i = 0; i < TAMANHO; i++) {
+        for(j = i + 1; j < TAMANHO; j++) {
+            if(vetor[i] == vetor[j]) {
+                printf("Valor %d encontrado nas posições %d e %d\n", vetor[i], i, j);
+                encontrouIguais = 1;
+            }
+        }
+    }
+
+    // Se não encontrou valores iguais
+    if(!encontrouIguais) {
+        printf("Nenhum valor igual encontrado.\n");
+    }
+
+    return 0;
+}
