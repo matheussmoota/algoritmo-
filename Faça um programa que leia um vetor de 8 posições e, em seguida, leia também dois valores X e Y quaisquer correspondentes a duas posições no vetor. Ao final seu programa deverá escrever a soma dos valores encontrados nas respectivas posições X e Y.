@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+#define TAMANHO 8
+
+int main() {
+    int vetor[TAMANHO];
+    int x, y;
+    int posicaoX, posicaoY;
+
+    // Leitura do vetor
+    printf("Digite 8 números inteiros:\n");
+    for(int i = 0; i < TAMANHO; i++) {
+        printf("Elemento %d: ", i + 1);
+        scanf("%d", &vetor[i]);
+    }
+
+    // Leitura das posições X e Y
+    printf("Digite a posição X (0 a 7): ");
+    scanf("%d", &posicaoX);
+    printf("Digite a posição Y (0 a 7): ");
+    scanf("%d", &posicaoY);
+
+    // Verifica se as posições são vál
